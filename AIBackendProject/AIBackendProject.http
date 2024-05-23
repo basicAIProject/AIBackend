@@ -1,0 +1,6 @@
+@AIBackendProject_HostAddress = http://localhost:5071
+
+GET {{AIBackendProject_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
