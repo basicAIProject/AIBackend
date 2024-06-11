@@ -1,11 +1,19 @@
 
+using AIBackendProject.RunGame;
+
 namespace AIBackendProject
 {
     public class Program
     {
         public static void Main(string[] args)
         {
-            var builder = WebApplication.CreateBuilder(args);
+            GameManager gameManager = new GameManager();
+            Console.Out.WriteLine(gameManager.GetCurrentPlayer(gameManager._boardManager.Board));
+            foreach (var VARIABLE in gameManager.PossibleActions(gameManager._boardManager.Board))
+            {
+                Console.Out.WriteLine(VARIABLE);   
+            }
+            /*var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
 
@@ -29,7 +37,7 @@ namespace AIBackendProject
 
             app.MapControllers();
 
-            app.Run();
+            app.Run();*/
         }
     }
 }
